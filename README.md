@@ -23,12 +23,15 @@ Introdução:
 	Na parte ​A ​​construi-se os modelos fuzzy usando as inferências mamdani e sugeno com 25 regras e 9 regras respetivamente para cada modelo. Já a parte B,​​ a que designamos dinâmica, o sistema gera as regras por meio de um algoritmo de aprendizagem.
 
 1.1. Objetivo
+
 	O presente trabalho tem como objetivo modelar um sistema de controlo utilizando a abordagem fuzzy que seja capaz de aprender e aproximar-se dos valores gerados por uma função de transferências de forma adaptativa, levando em conta as perturbações que podem ocorrer no ambiente.
 
 1.2. Tarefas
+
 	O presente trabalho encontra dividido em duas partes, A e B. Para a concretização do objetivo acima enunciado foram pré estabelecidas as seguintes tarefas para cada parte:
 
 ❏ Parte A
+
 	1. Revisão bibliográfica (enunciado, aulas lecionadas e enciclopédia)
 	2. Definição das regras
 	3. Modelação dos controladores
@@ -38,6 +41,7 @@ Introdução:
 	7. Reportar os resultados
 
 ❏ Parte B
+
 	1. Determinação dos valores para a criação do modelo indicado
 	2. Criação da matriz de Clustering
 	3. Desenvolvimento da parte relativa ao treino e teste
