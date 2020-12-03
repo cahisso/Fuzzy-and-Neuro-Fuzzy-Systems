@@ -6,6 +6,8 @@ Neste repositorio estarei a partilhar o meu trabalho de Mestrado em Engenharia I
 
 Farei inicialmente uma breve introdução do que se trata e em seguida a estrutura como foi organizado o trabalho:
 
+ATT: O codigo partilhado foi desenvolvido usando o MathLab.
+
 Introdução:
 	Os sistemas neuro-fuzzy são sistemas semelhantes aos utilizados no treino de redes neuronais com a diferença que os parâmetros da função de associação são ajustados utilizando métodos de aprendizagem neuro-adaptativos (mamdani e sugeno).
 	

@@ -1,0 +1,44 @@
+controller = readfis('controllers/9mamdani_bisector.fis');
+controller1 = readfis('controllers/9mamdani_centroid.fis');
+controller2 = readfis('controllers/9mamdani_lom.fis');
+controller3 = readfis('controllers/9mamdani_som.fis');
+controller4 = readfis('controllers/9mamdani_mom.fis');
+controller5 = readfis('controllers/25mamdani_bisector.fis');
+controller6 = readfis('controllers/25mamdani_centroid.fis');
+controller7 = readfis('controllers/25mamdani_lom.fis');
+controller8 = readfis('controllers/25mamdani_som.fis');
+controller9 = readfis('controllers/25mamdani_mom.fis');
+controller10 = readfis('controllers/9sugeno_wtaver.fis');
+controller11 = readfis('controllers/9sugeno_wtsum.fis');
+controller12 = readfis('controllers/25sugeno_wtaver.fis');
+controller13 = readfis('controllers/25sugeno_wtsum.fis');
+Paths = '';
+total = 24;
+filename = '';
+
+for i = 1:total
+    readfis(strcat(Paths,filename));
+end  
+    
+ % seleciona todos os arquivos com terminação .xls
+files = dir(strcat('.\',ano,'\*.xls'));
+
+% Para cada um dos arquivos:
+for file = files'
+    Arquivo = strcat('.\',ano,'\',file.name);
+    
+    C1 = strsplit(Arquivo, {'/','_','.'}, 'CollapseDelimiters', true);
+    Caminho = strcat('.\Perfil\Relatorio',C1{2},'.txt');
+
+    fileID = fopen(Caminho,'at');
+
+    % Para cada dia da semana
+    for i = 1:7
+        [nomeTxt,flag_zeros, flag_nan, violacoes] = perfil_de_carga(Arquivo,i);
+        fprintf(fileID, '\n %s \t %d \t %d \t %d', nomeTxt,flag_zeros, flag_nan, violacoes);
+    end
+
+
+    fclose(fileID);
+   
+end   
